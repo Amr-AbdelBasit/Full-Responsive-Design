@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+/* Start Header */
+header {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgb(4, 9, 20, 0.7), rgba(4, 9, 30, 0.7)),
+    url(Images/banner.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  display: flex;
+  padding: 2% 6%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  color: white;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-size: 13px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: tomato;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.txt-box {
+  color: #fff;
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.txt-box h1 {
+  font-size: 62px;
+}
+.txt-box p {
+  font-size: 14px;
+  margin: 10px 0 40px;
+  color: #fff;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  background: transparent;
+  cursor: pointer;
+}
+.hero-btn:hover {
+  border: 1px solid #f33446;
+  color: #fff;
+  background-color: #f33336;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .txt-box h1 {
+    font-size: 20px;
+  }
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    background: #f33446;
+    width: 200px;
+    height: 100vh;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    margin: 30px;
+  }
+}
+/* End Header */
+
+/* Start Course Section */
+.course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.course h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.course p {
+  margin-bottom: 5%;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 300;
+  color: #777;
+  line-height: 20px;
+}
+.row {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+}
+.course-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  padding: 20px 12px;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+h3 {
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.course-col:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+/* End Course Section */
+/* Start Campus Section  */
+.campus {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.campus h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.campus p {
+  color: #777;
+  margin-bottom: 5%;
+  font-weight: 300;
+  padding: 10px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.campus-col {
+  flex-basis: 32%;
+  margin-bottom: 32px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.campus-col img {
+  width: 100%;
+  display: block;
+}
+.layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+.layer h3 {
+  width: 100%;
+  color: #fff;
+  font-size: 26px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  opacity: 0;
+  transition: 0.5s;
+  /* cursor: pointer; */
+}
+.layer:hover h3 {
+  opacity: 1;
+  bottom: 50%;
+}
+/* End Campus Section  */
+/* Start Facilities Section  */
+.facilities {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+}
+.facilities h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.facilities p {
+  margin-bottom: 5%;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 300;
+  color: #777;
+  line-height: 20px;
+}
+.facilities-col {
+  flex-basis: 31%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  text-align: left;
+}
+.facilities img {
+  width: 100%;
+  border-radius: 10px;
+}
+.facilities-col p {
+  padding: 0;
+}
+.facilities-col h3 {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 16px 0 15px;
+}
+/* End Facilities Section  */
+/* Start Testimonials Section  */
+.testimonials {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.testimonials h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.testimonials p {
+  margin-bottom: 5%;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 300;
+  color: #777;
+  line-height: 20px;
+}
+.testimonials-col {
+  flex-basis: 44%;
+  background: #fff3f3;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  text-align: left;
+  padding: 25px;
+  display: flex;
+}
+.testimonials-col img {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 30px;
+  margin-left: 5px;
+}
+.testimonials-col p {
+  padding: 0;
+}
+.testimonials-col h3 {
+  margin-top: 5%;
+  text-align: left;
+}
+.testimonials-col .fa , .far {
+  color: #f44336;
+}
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(Images/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 36px;
+}
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 24px;
+  }
+}
+/* End CTA Section  */
+/* Start Footer (About) */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+footer h4 {
+  font-weight: 600;
+  margin: 20px 0 25px;
+
+}
+.icons .fa {
+  /* color: #cca8a5; */
+  margin: 0 13px;
+  padding: 18px 0;
+}
+.fa-heart {
+  color: #f44336;
+}
+.fa-facebook {
+  color: #2d88ff;
+}
+.fa-twitter {
+  color: #1da1f2;
+}
+.fa-instagram {
+  color: #E1306C;
+}
+.fa-linkedin {
+  color: #0a66c2;
+}
