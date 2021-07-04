@@ -1,9 +1,9 @@
 function showMenu() {
     let navLinks = document.getElementById('navLinks');
-    navLinks.style.right = "0";
+    navLinks.style.display = "block";
 }
 
 function hideMenu() {
     let navLinks = document.getElementById('navLinks');
-    navLinks.style.right = "-200px";
+    navLinks.style.display = "none";
 }
