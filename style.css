@@ -523,5 +523,6 @@ footer h4 {
   padding: 15px;
   margin-bottom: 17px;
   outline: none;
+  box-sizing: border-box;
 }
 /* -- End Contact Us --  */
